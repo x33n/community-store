@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+APPLICATION NAME: CommunityStore
+VERSION: 1.0
+AUTHOR: Modular View
+AUTHOR URL: https://github.com/modularview/
+LICENSE: MIT
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<html ng-controller="MainViewController">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title ng-bind="appTitle"></title>
+        <meta name="description" content="CommunityStore is a local market app available online.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        
+        <!-- icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/touch/apple-touch-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/touch/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/touch/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/images/touch/apple-touch-icon-57x57-precomposed.png">
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        
+        <!-- fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+
+        <!-- css -->
+        <link rel="stylesheet" href="assets/bower_components/angular-material/angular-material.min.css">
+        <link rel="stylesheet" href="assets/css/app.css">
+        
+        <!-- Angular Modules -->
+        <script src="assets/bower_components/angular/angular.js"></script>
+        <script src="assets/bower_components/angular-route/angular-route.js"></script>
+        <script src="assets/bower_components/angular-aria/angular-aria.js"></script>
+        <script src="assets/bower_components/angular-animate/angular-animate.js"></script>
+        <script src="assets/bower_components/angular-messages/angular-messages.min.js"></script>
+        <script src="assets/bower_components/angular-material/angular-material.js"></script>
+        
+        <!-- app -->
+        <script src="assets/bower_components/scriptjs/dist/script.min.js"></script>
+        <script src="app.bootstrap.js"></script>
+    </head>
+    
+    <body>
+        
+        <section ng-view class="page {{ pageClass }}"></section>
+        
+    </body>
+</html>

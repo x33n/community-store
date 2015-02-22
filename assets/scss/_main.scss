@@ -1,0 +1,52 @@
+// ~~~ HTML elements
+body {
+    color: $custom-brown;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+a {
+    color: $link-color;
+    text-decoration: none;
+}
+a:hover,
+a:focus {
+    color: $link-color-dark;
+    text-decoration: underline;
+}
+a:focus {
+    outline: 0;
+    outline-offset: -2px;
+}
+a:visited{
+    color: $link-color-dark;
+}
+
+
+// ~~~ fonts
+
+.small-font{
+    font-size: $small-font;
+}
+
+.float-title{
+    color: $custom-green;
+    font-weight: normal;
+}
+
+
+// ~~~ md overrides
+
+.md-button{
+    padding: 6px 8px !important;
+}
+
+
+// ~~~ general styles
+
+.box-label{
+    margin-left: 10px;
+}
+
+.icon-large{
+    font-size: $icon-large;
+}

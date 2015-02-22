@@ -1,0 +1,85 @@
+
+<!-- header -->
+<div class="login-header" layout="row">
+    <div flex></div>
+    <md-button aria-label="About" ng-click="showBottomBar($event)">
+        <i class="ico-info22 icon-large"></i>
+        <md-tooltip>About</md-tooltip>
+    </md-button>
+</div>
+
+
+<!-- page -->
+<div class="login-body" layout="column" layout-align="space-around center">
+    
+    <!-- logo-->
+    <img title="CommunityStore" src="assets/images/logo/logo-full.png">
+
+    <!-- title -->
+    <h1 class="float-title">A Local Market</h1>
+    
+    
+    <!-- forms -->
+    <div class="login-pages form-animate-container" ng-switch on="stateChange">
+
+        <!-- login -->
+        <form name="loginForm" class="form-animate" ng-switch-when="loginMode">
+
+            <md-input-container>
+                <label>Email</label>
+                <input ng-model="user.email" name="email" placeholder="example@email.com" required>
+                <div ng-messages="loginForm.email.$error">
+                    <div ng-message="required">Please enter a valid email</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container>
+                <label>Password</label>
+                <input ng-model="user.password" name="password" type="password" required>
+                <div ng-messages="loginForm.password.$error"></div>
+            </md-input-container>
+
+            <md-checkbox class="md-primary" ng-model="data.signInMode" aria-label="Keep me signed in">
+                Keep me signed in
+            </md-checkbox>
+
+            <div class="form-actions" layout="row">
+                <md-button class="md-raised md-primary" ng-click="doLogin(loginForm)">Login</md-button>
+                <div flex></div>
+                <div class="">
+                    <div class="small-font">Or login with:</div>
+                    <span class="social-button facebook ico-facebook"></span>
+                    <span class="social-button twitter ico-twitter2"></span>
+                    <span class="social-button google ico-google-plus"></span>
+                    <span class="social-button linkedin ico-linkedin"></span>
+                </div>
+            </div>
+
+            <div class="form-footer">Don't have an account yet? <a href="javascript:void(0)" ng-click="changeFormState($event)" id="loginFormTrigger">Create an account</a></div>
+        </form>
+
+        <!-- register -->
+        <form class="form-animate" ng-switch-when="registerMode">
+            <md-input-container>
+                <label>Email</label>
+                <input placeholder="example@email.com" required>
+            </md-input-container>
+
+            <md-input-container>
+                <label>Password</label>
+                <input type="password" required>
+            </md-input-container>
+
+            <md-input-container>
+                <label>Retype Password</label>
+                <input type="password" required>
+            </md-input-container>
+
+            <md-checkbox class="md-primary" aria-label="I agree">I agree</md-checkbox>
+            
+            <md-button class="button-margin md-raised md-primary">Create Account</md-button>
+
+            <div class="form-footer">Already have an account? <a href="javascript:void(0)" ng-click="changeFormState($event)">Log In</a></div>
+        </form>
+    </div>
+</div>
