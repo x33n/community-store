@@ -7,6 +7,9 @@ angular.module('CommunityStoreApp', [
     'ngAnimate',
     'ngMaterial',
     'ngMessages',
+    //widgets
+    'AppHeader',
+    'Product',
     //views
     'MainView',
     'LoginView',

@@ -1,0 +1,53 @@
+.app-header {
+    margin-bottom: 5px;
+}
+
+.app-header .md-header,
+.logo-link,
+.logo-link span {
+    height: 64px;
+}
+
+.app-header md-tabs.md-default-theme md-tab.active {
+    color: $custom-brown;
+    //background-color: $custom-bg-color;
+}
+
+.logo-link,
+.logo-link span{
+    display: inline-block;
+    text-decoration: none;
+}
+
+.logo-text {
+    width: 140px;
+    background: url("#{$images-path}logo/logo-text-inverse.png") no-repeat center;
+    -webkit-background-size: 140px 64px;
+    background-size: 140px 64px;
+}
+.logo-figure {
+    width: 60px;
+    background: url("#{$images-path}logo/logo-figure-inverse.png") no-repeat center;
+    -webkit-background-size: 45px 45px;
+    background-size: 45px 45px;
+}
+
+/*
+@media (min-width: 768px){
+    .app-header md-toolbar .md-toolbar-tools {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px){
+    .app-header md-toolbar .md-toolbar-tools {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px){
+    .app-header md-toolbar .md-toolbar-tools {
+        width: 1170px;
+    }
+}
+*/

@@ -28,9 +28,14 @@ a:visited{
     font-size: $small-font;
 }
 
+.float-large-title,
 .float-title{
-    color: $custom-green;
     font-weight: normal;
+    text-align: center;
+}
+
+.float-large-title{
+    text-transform: uppercase;
 }
 
 
@@ -41,12 +46,57 @@ a:visited{
 }
 
 
-// ~~~ general styles
+// ~~~ spaces
 
 .box-label{
     margin-left: 10px;
 }
 
+md-sidenav h2.top-margin{
+    margin-top: 10%;
+}
+
+md-sidenav h2.bottom-space{
+    padding-bottom: 0;
+}
+
+.custom-padding{
+    padding: 16px 10%;
+}
+
+.bottom-space{
+    padding-bottom: 16px;
+}
+
+
+// ~~~ general styles
+
 .icon-large{
     font-size: $icon-large;
+}
+
+.tag-button.md-button.md-default-theme{
+    border: 1px solid $custom-blue;
+    border-radius: 50px;
+    margin: 3px;
+}
+.tag-button span{
+    color: $custom-blue;
+    text-transform: lowercase;
+    font-size: $small-font;
+}
+
+//list
+ul.list-simple{
+    margin: 0;
+    padding: 0;
+}
+ul.list-simple > li{
+    list-style: none;
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+ul.list-simple > li i{
+    padding: 0 10px;
+    color: darken($custom-bg-color, 15%);
 }

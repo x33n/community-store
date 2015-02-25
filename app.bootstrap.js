@@ -2,6 +2,9 @@
  * Load all JS dependencies, then bootstrap the application.
  */
 $script([
+    //widgets
+    'widgets/appheader/module.js',
+    'widgets/product/module.js',
     //views
     'views/main/controller.js',
     'views/login/controller.js',

@@ -1,0 +1,17 @@
+<div flex="30" class="product-container">
+    
+    <!-- image -->
+    <img data-ng-src="{{'assets/products/'+ product.image +'.jpg'}}">
+    
+    <!-- title -->
+    <h3 class="product-title">{{product.title}}</h3>
+    
+    <!-- price -->
+    <h2 class="product-price">${{product.price}}</h2>
+    
+    <!-- links -->
+    <div layout="row" class="product-links" layout-align="space-around center">
+        <span><i class="ico-cart-add"></i> Add to cart</span>
+        <span><i class="ico-list-ul"></i> Item detail</span>
+    </div>
+</div>

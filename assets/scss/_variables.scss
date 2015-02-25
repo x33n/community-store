@@ -1,5 +1,5 @@
 // ~~~ paths
-$images-path: '../images';
+$images-path: '../images/';
 
 // ~~~ colors
 $custom-orange: #fa8b38;
@@ -13,9 +13,3 @@ $link-color: $custom-blue;
 $link-color-dark: darken( $custom-blue, 10% );
 $small-font: 0.8em;
 $icon-large: 1.5em;
-
-/*
-0-600
-601-960
-961-1200
-1200-*/
