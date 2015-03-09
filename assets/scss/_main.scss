@@ -45,6 +45,10 @@ a:visited{
     padding: 6px 8px !important;
 }
 
+.md-track-ticks canvas{
+    visibility: hidden;
+}
+
 
 // ~~~ spaces
 
@@ -76,7 +80,7 @@ md-sidenav h2.bottom-space{
 }
 
 .tag-button.md-button.md-default-theme{
-    border: 1px solid $custom-blue;
+    border: 1px solid #00B4AC;
     border-radius: 50px;
     margin: 3px;
 }
@@ -84,6 +88,15 @@ md-sidenav h2.bottom-space{
     color: $custom-blue;
     text-transform: lowercase;
     font-size: $small-font;
+}
+
+.tag-button.md-default-theme:not([disabled]):hover, 
+.tag-button.md-default-theme:not([disabled]):focus {
+    border: 1px solid #efefef;
+}
+.tag-button.md-default-theme:not([disabled]):hover span, 
+.tag-button.md-default-theme:not([disabled]):focus span {
+    color: darken($custom-blue, 10%);
 }
 
 //list

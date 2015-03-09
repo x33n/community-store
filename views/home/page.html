@@ -2,22 +2,50 @@
 <app-header></app-header>
 
 <!-- body -->
-<div layout layout="row" flex>
+<md-content class="md-padding" layout="column" layout-align="center center" flex>
+    
+    <!-- content holder -->
+    <div class="page-content-holder" layout="row" layout-align="space-between start">
 
-    <!-- left sidebar -->
-    <md-sidenav class="md-sidenav-left" md-is-locked-open="$media('gt-md')" flex="20">
-        <md-content class="md-padding">
+        <!-- items -->
+        <div layout="column" flex="70">
+
+
+            <!-- title -->
+            <h1 class="float-large-title">Today in Our Store</h1>
+
+            <!-- search -->
+            <div layout="row" layout-align="center center" class="search-bar">
+                <md-input-container flex>
+                    <label>Search</label>
+                    <input ng-model="store.search">
+                </md-input-container>
+
+                <md-button class="md-raised md-primary ico-search" aria-label="search"></md-button>
+            </div>
+
+
+            <div layout="row" layout-align="space-between start">
+                <product ng-repeat="product in products"></product>
+            </div>
+        </div>
+
+        <!-- right sidebar -->
+        <section class="right-bar">
             <!-- tags -->
             <div class="sidenav-title bottom-space sidenav-title-first">Shop By Tags</div>
-            <div ng-repeat="tag in tags"><md-button class="tag-button">{{tag}}</md-button></div>
+            <md-button class="tag-button md-primary" ng-repeat="tag in tags">{{tag}}</md-button>
 
             <!-- categories -->
             <div class="sidenav-title bottom-space">Shop By Category</div>
             <ul class="list-simple"><li ng-repeat="category in categories"><i class="ico-angle-right"></i><a href="javascript:void(0);">{{category}}</a></li></ul>
-            
+
             <!-- price -->
             <div class="sidenav-title">Price Range</div>
-            <md-slider class="md-primary" flex md-discrete ng-model="price.to" step="20" min="0" max="300" aria-label="Price Range"></md-slider>
+
+            <md-slider class="md-primary right-bar-slider" md-discrete 
+                       ng-model="price.to" step="5" min="0" max="300" aria-label="Price Range"></md-slider>
+
             <div layout layout="row">
                 <md-input-container>
                     <label>From</label>
@@ -25,13 +53,13 @@
                 </md-input-container>
 
                 <div flex="10">&nbsp;-&nbsp;</div>
-                
+
                 <md-input-container>
                     <label>To</label>
                     <input type="number" step="any" ng-model="price.to">
                 </md-input-container>
             </div>
-            
+
             <!-- delivery -->
             <div class="sidenav-title sidenav-title-last">Delivery Options</div>
             <md-radio-group ng-model="data.group1">
@@ -39,30 +67,9 @@
                 <md-radio-button class="md-primary" value="paid">Paid delivery</md-radio-button>
                 <md-radio-button class="md-primary" value="pickup">Pickup by yourself</md-radio-button>
             </md-radio-group>
-        </md-content>
-    </md-sidenav>
-    
+        </section>
 
-    <!-- content -->
-    <md-content class="custom-padding" flex="66">
-        
-        <!-- title -->
-        <h1 class="float-large-title">Today in Our Store</h1>
-        
-        <!-- search -->
-        <div layout="row" layout-align="center center" class="search-bar">
-            <md-input-container flex="55">
-                <label>Search</label>
-                <input ng-model="store.search">
-            </md-input-container>
-            
-            <md-button class="md-raised md-primary ico-search" aria-label="search"></md-button>
-        </div>
-        
-        <!-- items -->
-        <div layout layout="row"  layout-align="space-between center">
-            <product ng-repeat="product in products"></product>
-        </div>
-    </md-content>
 
-</div>
+
+    </div>
+</md-content>

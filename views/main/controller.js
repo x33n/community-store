@@ -10,25 +10,24 @@ angular.module('MainView', [])
  * On intialization - create a custom theme for this application.
  */
 .config(function($mdThemingProvider){
-    // Extend the grey theme with a few different colors
-    var appPrimaryPallete = $mdThemingProvider.extendPalette('grey',{
-//        '0': '#ffffff',
-//        '50': '#fafafa',
-//        '100': '#f5f5f5',
-//        '200': '#eeeeee',
-//        '300': '#e0e0e0',
-//        '400': '#bdbdbd',
-        '500': '#00b6ad', //custom blue
-        '600': '#00837D', //custom 500 darken
-//        '700': '#616161',
-//        '800': '#424242',
-//        '900': '#212121',
-//        '1000': '#000000',
-//        'A100': '#ffffff',
-//        'A200': '#eeeeee',
-//        'A400': '#bdbdbd',
-        'A700': '#6e5e56', //custom brown
-        'contrastDefaultColor': 'light', //white fonts color
+    
+    // primary
+    $mdThemingProvider.definePalette('app-primary-pallete',{
+        '50': '#f7fefd',
+        '100': '#eefcfb',
+        '200': '#dffaf7',
+        '300': '#c7f6f2',
+        '400': '#00d8cf', 
+        '500': '#00b4ac',
+        '600': '#008680',
+        '700': '#00706b',
+        '800': '#004c49',
+        '900': '#002624',
+        'A100': '#A7FFEB',
+        'A200': '#64FFDA',
+        'A400': '#1DE9B6',
+        'A700': '#00BFA5',
+        'contrastDefaultColor': 'light',
         'contrastLightColors': '600 700 800 900'
     });
     
@@ -44,7 +43,7 @@ angular.module('MainView', [])
         '800': '#558b2f',
         '900': '#33691e',
         'A100': '#ccff90',
-        'A200': '#b2ff59',
+        'A200': '#ffffff',
         'A400': '#76ff03',
         'A700': '#64dd17',
         'contrastDefaultColor': 'dark',
@@ -52,20 +51,19 @@ angular.module('MainView', [])
         'contrastStrongLightColors': '800 900'
     });
     
-    // Register the new color palette map with the name <code>appPrimaryPallete</code>
-    $mdThemingProvider.definePalette('appPrimaryPallete', appPrimaryPallete);
-    
     // Use that theme for the primary intentions
-    $mdThemingProvider.theme('default').primaryPalette('appPrimaryPallete',{
-        'hue-1': 'A700' // use this shade for the <code>class="md-hue-1"</code>
+    $mdThemingProvider.theme('default')
+    
+    .primaryPalette('app-primary-pallete',{
+//        'default': '500', // by default use this shade for primary intentions
+//        'hue-1': '50', // use this shade in html: <code>class="md-hue-1"</code>
+        'hue-2': '600' // use this shade in html: <code>class="md-hue-2"</code>
+//        'hue-3': 'A100' // use this shade in html: <code>class="md-hue-3"</code>
     })
     
-    //accent - lighter palette for secondary elements
-    .accentPalette('app-accent-pallete', {
-        'default': '400', // use shade 500 for default, and keep all other shades the same
-        'hue-1': '50'
-    });
-    
+    .accentPalette('app-accent-pallete');
+//    .warnPalette('app-warn-pallete')
+//    .backgroundPalette('app-background-pallete');
 })
 
 
@@ -75,6 +73,5 @@ angular.module('MainView', [])
 .controller('MainViewController', ['$scope', function($scope){
     
     $scope.appTitle = 'CommunityStore';
-    $scope.isPageEffectActive = false;
 
 }]);

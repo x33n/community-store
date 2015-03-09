@@ -1,25 +1,27 @@
 <header class="app-header">
-    <md-toolbar class="md-accent md-hue-1">
-        <div class="md-toolbar-tools">
-    
+    <md-toolbar class="md-hue-2" layout="column" layout-align="center center">
+        <div class="app-header-inner" layout="row" flex>
+
             <!-- Logo -->
-            <a class="logo-link" href="#home" flex="20">
-                <span class="logo-figure"></span>
-                <span class="logo-text"></span>
-            </a>
+            <div class="logo-link" flex="70">
+                <span class="logo-text">CommunityStore</span>
+            </div>
 
             <!-- tabs -->
-            <md-tabs>
-                <md-tab id="tab1" aria-controls="tab1-content">
-                    Shop
-                </md-tab>
-                <md-tab id="tab2" aria-controls="tab2-content">
-                    Profile
-                </md-tab>
-                <md-tab id="tab3" aria-controls="tab3-content">
-                    About
-                </md-tab>
-            </md-tabs>
+            <div flex>
+                <md-tabs class="app-header-tabs">
+                    <md-tab id="tab1" aria-controls="tab1-content">
+                        Shop
+                    </md-tab>
+                    <md-tab id="tab2" aria-controls="tab2-content">
+                        Profile
+                    </md-tab>
+                    <md-tab id="tab3" aria-controls="tab3-content">
+                        About
+                    </md-tab>
+                </md-tabs>
+            </div>
+    
         </div>
     </md-toolbar>
 </header>

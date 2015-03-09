@@ -8,7 +8,7 @@ angular.module('HomeView', [])
 .controller('HomeViewController', function($scope){
     
     $scope.pageClass = 'page-home';
-    $scope.tags = ['All', 'Newest Items', 'Trending Items', 'Best Sellers', 'Best Rated'];
+    $scope.tags = ['All', 'Newest Items', 'Trending Items', 'Best Sellers', 'Best Rated', 'Best Match', 'On Sale'];
     $scope.categories = ['Arts & Craft', 'Baby', 'Beauty', 'Books', 'Clothing & Shoes', 'Furnitures', 'Food'];
 
     $scope.price = {
