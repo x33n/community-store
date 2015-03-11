@@ -1,4 +1,6 @@
+
 // ~~~ HTML elements
+
 body {
     color: $custom-brown;
     font-family: 'Ubuntu', sans-serif;
@@ -38,11 +40,16 @@ a:visited{
     text-transform: uppercase;
 }
 
+.float-title-left{
+    font-weight: normal;
+    text-align: left;
+}
+
 
 // ~~~ md overrides
 
 .md-button{
-    padding: 6px 8px !important;
+   // padding: 6px 8px !important;
 }
 
 .md-track-ticks canvas{
@@ -75,6 +82,7 @@ md-sidenav h2.bottom-space{
 
 // ~~~ general styles
 
+// buttons
 .icon-large{
     font-size: $icon-large;
 }
@@ -97,6 +105,16 @@ md-sidenav h2.bottom-space{
 .tag-button.md-default-theme:not([disabled]):hover span, 
 .tag-button.md-default-theme:not([disabled]):focus span {
     color: darken($custom-blue, 10%);
+}
+
+.content-button{
+    padding: 6px 16px;
+    text-transform: none;
+}
+
+// content
+.page-content-holder{
+    background-color: #fff;
 }
 
 //list

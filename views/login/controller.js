@@ -5,7 +5,7 @@
  */
 angular.module('LoginView', [])
 
-.controller('LoginViewController', function($scope, $location, $mdBottomSheet){
+.controller('LoginViewController', function($scope, $state, $mdBottomSheet){
     
     $scope.pageClass = 'page-login';
     $scope.stateChange = 'loginMode';
@@ -30,7 +30,7 @@ angular.module('LoginView', [])
         if(!form.$valid){
             return;
         }
-        $location.path('/home');
+        $state.go('home.store');
     };
     
 });

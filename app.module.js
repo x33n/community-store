@@ -1,17 +1,23 @@
 angular.module('CommunityStoreApp', [
     // modules dependencies for 
-    // the application:
+    // this application:
     
     //angular modules
-    'ngRoute',
     'ngAnimate',
     'ngMaterial',
     'ngMessages',
+    'ui.router',
+    'chart.js',
+    
     //widgets
-    'AppHeader',
+    'Header',
     'Product',
+    
     //views
     'MainView',
     'LoginView',
-    'HomeView'
+    'HomeView',
+    'StoreView',
+    'ProfileView',
+    'AboutView'
 ]);

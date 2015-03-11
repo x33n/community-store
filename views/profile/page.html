@@ -1,7 +1,91 @@
-<!-- header -->
-<app-header></app-header>
 
-<!-- body -->
-<md-content class="md-padding" layout="column" layout-align="center center" flex>
+<!-- first row - user details -->
+<div class="page-content-holder" layout="row" layout-fill>
     
-</md-content>
+    <!-- left -->
+    <section class="user-details-left" flex="35" layout="column" layout-align="center center">
+        <h2 class="float-title">Mr. Someone</h2>
+        
+        <img class="user-img" src="data/images/avatar/user.jpg" alt="">
+        
+        <div class="user-row small-font">Joined 07 October, 2014 </div>
+        
+        <div>
+            <md-button class="md-primary md-raised md-warn content-button box-label">Follow</md-button>
+            <md-button class="md-primary md-raised content-button user-contact-btn">Contact</md-button>
+        </div>
+        
+        <div class="user-status" layout="row" layout-fill>
+            <div class="user-status-left" flex>30<br>Items</div>
+            <div class="user-status-right" flex>12<br>Followers</div>
+        </div>
+    </section>
+    
+    
+    <!-- right -->
+    <section class="user-about" flex>
+        <h2 class="float-title-left">About</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit velit diam, ac aliquet diam ullamcorper sed. Suspendisse vel risus dapibus elit aliquam ullamcorper. Quisque in erat nec odio ullamcorper fringilla ac eget tellus.
+        </p>
+        <p>
+            Nullam sit amet commodo lorem. Phasellus scelerisque lacinia ante, sit amet bibendum tortor maximus et. Vivamus pharetra cursus urna sit amet iaculis. 
+            Nulla non ultricies orci. Pellentesque nec dui convallis, hendrerit eros ac, dapibus neque. Sed scelerisque urna augue.
+        </p>
+        <div layout="row" style="padding-top: 7px;">
+            <md-button class="user-social-button md-accent md-hue-1 md-fab ico-facebook" aria-label=""></md-button>
+            <md-button class="user-social-button md-accent md-hue-1 md-fab ico-twitter2" aria-label=""></md-button>
+            <md-button class="user-social-button md-accent md-hue-1 md-fab ico-google-plus" aria-label=""></md-button>
+            <md-button class="user-social-button md-accent md-hue-1 md-fab ico-linkedin" aria-label=""></md-button>
+        </div>
+    </section>
+</div>
+
+
+<!-- second row - chart -->
+<div class="page-content-holder user-chart">
+    <h2 class="float-title-left">Number of Sales</h2>
+    <div class="user-chart-container">
+        <canvas id="line" class="chart chart-line" data="chartData.data" labels="chartData.labels" series="chartData.series"></canvas> 
+    </div>
+</div>
+
+
+<!-- third row -->
+<div class="page-content-holder" layout="row" layout-align="space-between start">
+    
+    <!-- left -->
+    <section class="user-products" flex>
+        <h2 class="float-title-left">Products in Store</h2>
+        
+<!--        <md-grid-list md-cols="6" md-gutter="0.5em" md-row-height="100">
+            <md-grid-tile class="user-products-display" ng-repeat="product in gallery">
+                <img ng-src="data/images/products/{{ product.img }}.jpg" width="80">
+                {{ product.name }}
+                ${{ product.price }}
+            </md-grid-tile>
+        </md-grid-list>-->
+        
+        <div layout="row" layout-align="space-between start">
+            <div class="user-products-display" ng-repeat="product in gallery">
+                <img ng-src="data/images/products/{{ product.img }}.jpg" width="80">
+                ${{ product.price }}<br>
+                {{ product.name }}
+            </div>
+        </div>
+        
+        
+    </section>
+    
+    <!-- right -->
+    <section class="user-friends" flex>
+        <h2 class="float-title-left">Friends List</h2>
+        
+        <div class="user-friends-list" height="500px">
+            <div class="user-friends-list-item" ng-repeat="friend in friends">
+                <img ng-src="data/images/avatar/{{ friend.img }}.jpg" width="50">
+                <span>{{ friend.name }}</span>
+            </div>
+        </div>
+    </section>
+</div>

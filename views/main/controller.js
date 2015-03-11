@@ -31,22 +31,43 @@ angular.module('MainView', [])
         'contrastLightColors': '600 700 800 900'
     });
     
+    // accent
     $mdThemingProvider.definePalette('app-accent-pallete',{
-        '50': '#ffffff',
-        '100': '#dcedc8',
-        '200': '#c5e1a5',
-        '300': '#aed581',
-        '400': '#98cf5c', //custom green
-        '500': '#8bc34a',
-        '600': '#7cb342',
-        '700': '#689f38',
-        '800': '#558b2f',
-        '900': '#33691e',
-        'A100': '#ccff90',
-        'A200': '#ffffff',
-        'A400': '#76ff03',
-        'A700': '#64dd17',
-        'contrastDefaultColor': 'dark',
+        '50': '#fbfdf8',
+        '100': '#f5faf0',
+        '200': '#eff7e6',
+        '300': '#e1f0d0',
+        '400': '#b3dc88',
+        '500': '#98cf5c',
+        '600': '#71ab32',
+        '700': '#5d8d29',
+        '800': '#3f601c',
+        '900': '#20300e',
+        'A100': '#b3dc88', //400
+        'A200': '#ffffff', 
+        'A400': '#3f601c', // 800
+        'A700': '#20300e', //900
+        'contrastDefaultColor': 'light',
+        'contrastLightColors': '600 700 800 900'
+    });
+    
+    // warn
+    $mdThemingProvider.definePalette('app-warn-pallete',{
+        '50': '#fff9f5',
+        '100': '#fff4eb',
+        '200': '#ffecdd',
+        '300': '#ffdcc1',
+        '400': '#feac6e',
+        '500': '#fe8a32',
+        '600': '#df6101',
+        '700': '#b95001',
+        '800': '#7e3701',
+        '900': '#401c01',
+        'A100': '#808080',
+        'A200': '#cccccc',
+        'A400': '#efefef',
+        'A700': '#ffffff',
+        'contrastDefaultColor': 'light',
         'contrastLightColors': '800 900',
         'contrastStrongLightColors': '800 900'
     });
@@ -55,14 +76,14 @@ angular.module('MainView', [])
     $mdThemingProvider.theme('default')
     
     .primaryPalette('app-primary-pallete',{
-//        'default': '500', // by default use this shade for primary intentions
-//        'hue-1': '50', // use this shade in html: <code>class="md-hue-1"</code>
         'hue-2': '600' // use this shade in html: <code>class="md-hue-2"</code>
-//        'hue-3': 'A100' // use this shade in html: <code>class="md-hue-3"</code>
     })
     
-    .accentPalette('app-accent-pallete');
-//    .warnPalette('app-warn-pallete')
+    .accentPalette('app-accent-pallete',{
+        'hue-1': '500'
+    })
+    
+    .warnPalette('app-warn-pallete');
 //    .backgroundPalette('app-background-pallete');
 })
 

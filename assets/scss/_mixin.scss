@@ -10,3 +10,11 @@
        -moz-animation: $name $duration $mode $timing;
             animation: $name $duration $mode $timing;
 }
+
+@mixin transform-page-effect($left, $top, $scale){
+    -webkit-transform: translate3d($left, $top, 0) scale($scale);
+       -moz-transform: translate3d($left, $top, 0) scale($scale);
+        -ms-transform: translate3d($left, $top, 0) scale($scale);
+         -o-transform: translate3d($left, $top, 0) scale($scale);
+            transform: translate3d($left, $top, 0) scale($scale);
+}

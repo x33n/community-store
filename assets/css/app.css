@@ -4932,6 +4932,28 @@
   -moz-animation: slideInRight 0.5s both ease-in;
   animation: slideInRight 0.5s both ease-in; }
 
+.home-inner-page.ng-animate {
+  position: absolute;
+  top: 69px;
+  left: 0;
+  right: 0;
+  z-index: 9999; }
+
+.home-inner-page.ng-leave.ng-leave-active,
+.home-inner-page.ng-enter {
+  opacity: 0;
+  -webkit-transform: translate3d(100px, 20px, 0) scale(0.9);
+  -moz-transform: translate3d(100px, 20px, 0) scale(0.9);
+  -ms-transform: translate3d(100px, 20px, 0) scale(0.9);
+  -o-transform: translate3d(100px, 20px, 0) scale(0.9);
+  transform: translate3d(100px, 20px, 0) scale(0.9); }
+
+.home-inner-page.ng-leave,
+.home-inner-page.ng-enter.ng-enter-active {
+  opacity: 1;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
+
 @-webkit-keyframes rotateFall {
   0% {
     -webkit-transform: rotateZ(0deg); }
@@ -4968,18 +4990,6 @@
     transform: rotateZ(16deg); }
   100% {
     transform: translateY(100%) rotateZ(17deg); } }
-@keyframes scaleUp {
-  from {
-    opacity: 0.3;
-    transform: scale(0.8); } }
-@-moz-keyframes scaleUp {
-  from {
-    opacity: 0.3;
-    -moz-transform: scale(0.8); } }
-@-webkit-keyframes scaleUp {
-  from {
-    opacity: 0.3;
-    -webkit-transform: scale(0.8); } }
 @keyframes slideInRight {
   from {
     transform: translateX(100%); }
@@ -4995,21 +5005,6 @@
     -webkit-transform: translateX(100%); }
   to {
     -webkit-transform: translateX(0); } }
-@keyframes slideInUp {
-  from {
-    transform: translateY(100%); }
-  to {
-    transform: translateY(0); } }
-@-moz-keyframes slideInUp {
-  from {
-    -moz-transform: translateY(100%); }
-  to {
-    -moz-transform: translateY(0); } }
-@-webkit-keyframes slideInUp {
-  from {
-    -webkit-transform: translateY(100%); }
-  to {
-    -webkit-transform: translateY(0); } }
 @keyframes slideOutLeft {
   to {
     transform: translateX(-100%); } }
@@ -5019,18 +5014,6 @@
 @-webkit-keyframes slideOutLeft {
   to {
     -webkit-transform: translateX(-100%); } }
-@-webkit-keyframes rotateOutNewspaper {
-  to {
-    -webkit-transform: translateZ(-3000px) rotateZ(360deg);
-    opacity: 0; } }
-@-moz-keyframes rotateOutNewspaper {
-  to {
-    -moz-transform: translateZ(-3000px) rotateZ(360deg);
-    opacity: 0; } }
-@keyframes rotateOutNewspaper {
-  to {
-    transform: translateZ(-3000px) rotateZ(360deg);
-    opacity: 0; } }
 .app-header {
   margin-bottom: 5px; }
 
@@ -5066,7 +5049,7 @@
     width: 1170px; } }
 .product-container {
   overflow: hidden;
-  background-color: rgba(110, 94, 86, 0.19); }
+  background-color: #f1efea; }
 
 .product-title {
   text-align: center;
@@ -5112,8 +5095,9 @@ a:visited {
 .float-large-title {
   text-transform: uppercase; }
 
-.md-button {
-  padding: 6px 8px !important; }
+.float-title-left {
+  font-weight: normal;
+  text-align: left; }
 
 .md-track-ticks canvas {
   visibility: hidden; }
@@ -5153,6 +5137,13 @@ md-sidenav h2.bottom-space {
 .tag-button.md-default-theme:not([disabled]):hover span,
 .tag-button.md-default-theme:not([disabled]):focus span {
   color: #00837d; }
+
+.content-button {
+  padding: 6px 16px;
+  text-transform: none; }
+
+.page-content-holder {
+  background-color: #fff; }
 
 ul.list-simple {
   margin: 0;
@@ -5276,5 +5267,76 @@ ul.list-simple > li i {
 
 .right-bar-slider {
   width: 90%; }
+
+.user-details-left {
+  background-color: #f1efea;
+  margin: 40px 40px 40px 8px; }
+
+.user-img {
+  border-radius: 50%;
+  border: 5px solid #FFF;
+  width: 120px; }
+
+.user-row {
+  margin: .83em 0; }
+
+.user-status {
+  padding-top: 30px; }
+
+.user-status div {
+  padding: 10px 6px;
+  text-align: center;
+  color: #fff; }
+
+.user-status-left {
+  background-color: #a9a69f; }
+
+.user-status-right {
+  background-color: #92908a; }
+
+.user-about {
+  margin: 40px 8px 16px 20px; }
+
+.user-about p {
+  text-align: justify; }
+
+.user-social-button {
+  margin: 0 5px; }
+
+.user-contact-btn {
+  margin-left: 15px; }
+
+.user-chart {
+  padding: 0 8px; }
+
+.user-products {
+  margin: 40px 40px 0px 8px; }
+
+.user-products-display {
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  font-size: 0.8em;
+  text-align: center; }
+
+.user-products-display img {
+  display: block;
+  margin-bottom: 5px; }
+
+.user-friends {
+  margin: 40px 8px 0px 0; }
+
+.user-friends-list {
+  background-color: #f1efea; }
+
+.user-friends-list-item {
+  padding: 10px;
+  border-bottom: 1px solid #FFF; }
+
+.user-friends-list-item img {
+  border-radius: 50%;
+  border: 2px solid #FFF; }
+
+.user-friends-list-item span {
+  font-size: 0.8em; }
 
 /*# sourceMappingURL=app.css.map */

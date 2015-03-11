@@ -1,33 +1,68 @@
 'use strict';
 
 /**
- * Home page
+ * User profile page
  */
-//angular.module('HomeView', [])
-//
-//.controller('HomeViewController', function($scope){
-//    
-//    $scope.pageClass = 'page-home';
-//    $scope.tags = ['All', 'Newest Items', 'Trending Items', 'Best Sellers', 'Best Rated', 'Best Match', 'On Sale'];
-//    $scope.categories = ['Arts & Craft', 'Baby', 'Beauty', 'Books', 'Clothing & Shoes', 'Furnitures', 'Food'];
-//
-//    $scope.price = {
-//        from: 0,
-//        to: 300
-//    };
-//    
-//    $scope.products = [{
-//        title: 'Some Product',
-//        price: '11.20',
-//        image: 'product1'
-//    },{
-//        title: 'Another Product',
-//        price: '15.00',
-//        image: 'product1'
-//    },{
-//        title: 'Product #3',
-//        price: '10.80',
-//        image: 'product1'
-//    }];
-//    
-//});
+angular.module('ProfileView', [])
+
+.controller('ProfileViewController', function($scope){
+    
+    Chart.defaults.global.maintainAspectRatio = false;
+    Chart.defaults.global.colours[0] = { // blue
+        fillColor: 'rgba(255,255,255,0)',
+        strokeColor: '#00b4ac',
+        pointColor: '#00b4ac',
+        pointStrokeColor: '#fff',
+        pointHighlightFill: '#fff',
+        pointHighlightStroke: 'rgba(70,191,189,0.8)'
+    };
+    Chart.defaults.global.colours[1] = {
+        fillColor: 'rgba(255,255,255,0)',
+        strokeColor: '#92908a',
+        pointColor: '#92908a',
+        pointStrokeColor: '#fff',
+        pointHighlightFill: '#fff',
+        pointHighlightStroke: 'rgba(220,220,220,0.8)'
+    };
+    
+    $scope.chartData = {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Dec'],
+        series: ['2014', '2015'],
+        data: [
+            [1, 5, 3, 19, 22, 5, 15, 2, 8, 25, 11, 14],
+            [14, 25, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        ]
+    };
+    
+    
+    $scope.gallery = [{
+        img: 'product1',
+        name: 'Nullam sit',
+        price: '15'
+    },{
+        img: 'product2',
+        name: 'Lorem',
+        price: '9'
+    },{
+        img: 'product1',
+        name: 'Nullam sit',
+        price: '15'
+    },{
+        img: 'product2',
+        name: 'Lorem',
+        price: '9'
+    },{
+        img: 'product1',
+        name: 'Nullam sit',
+        price: '15'
+    }];
+
+
+    $scope.friends = [{
+        img: 'user',
+        name: 'Abcd Efg'
+    },{
+        img: 'user',
+        name: 'Abcd Efg'
+    }];
+});

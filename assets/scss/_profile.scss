@@ -1,0 +1,87 @@
+.user-details-left{
+    background-color: $custom-bg-color;
+    margin: 40px 40px 40px 8px;
+}
+.user-img{
+    border-radius: 50%;
+    border: 5px solid #FFF;
+    width: 120px;
+}
+.user-row{
+    margin: .83em 0;
+}
+
+.user-status{
+    padding-top: 30px;
+}
+.user-status div{
+    padding: 10px 6px;
+    text-align: center;
+    color: #fff;
+}
+.user-status-left{
+    background-color: $custom-brown1;
+}
+.user-status-right{
+    background-color: $custom-brown2;
+}
+
+.user-about{
+    margin: 40px 8px 16px 20px;
+}
+
+.user-about p{
+    text-align: justify;
+}
+
+.user-social-button{
+    margin: 0 5px;
+}
+
+.user-contact-btn{
+    margin-left: 15px;
+}
+
+.user-chart{
+    padding: 0 8px;
+}
+
+.user-chart-container{
+   // height: 150px;
+}
+
+.user-products{
+    margin: 40px 40px 0px 8px;
+}
+
+.user-products-display{
+    padding: 5px;
+    border: 1px solid rgba(0,0,0,0.18);
+    font-size: $small-font;
+    text-align: center;
+}
+.user-products-display img{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.user-friends{
+    margin: 40px 8px 0px 0;
+}
+
+.user-friends-list{
+    background-color: $custom-bg-color;
+}
+
+.user-friends-list-item{
+    padding: 10px;
+    border-bottom: 1px solid #FFF;
+}
+
+.user-friends-list-item img{
+    border-radius: 50%;
+    border: 2px solid #FFF;
+}
+.user-friends-list-item span{
+    font-size: $small-font;
+}

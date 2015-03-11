@@ -1,0 +1,21 @@
+<header class="app-header" ng-controller="HeaderController">
+    <md-toolbar class="md-hue-2" layout="column" layout-align="center center">
+        <div class="app-header-inner" layout="row" flex>
+
+            <!-- Logo -->
+            <div class="logo-link" flex="70">
+                <span class="logo-text">CommunityStore</span>
+            </div>
+
+            <!-- tabs -->
+            <div flex>
+                <md-tabs class="app-header-tabs">
+                    <md-tab ng-repeat="tab in tabs" md-on-select="changePage(tab)">
+                        {{tab.text}}
+                    </md-tab>
+                </md-tabs>
+            </div>
+    
+        </div>
+    </md-toolbar>
+</header>
