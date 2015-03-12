@@ -4,7 +4,7 @@
 
 .logo-link{
     padding-top: 4px;
-    background: url("#{$images-path}logo/logo-figure-inverse.png") no-repeat left center;
+    background: url("#{$images-path}logo/logo-figure-inverse.png") no-repeat -4px center;
 }
 
 .logo-text {
@@ -23,28 +23,4 @@
 .app-header-tabs.md-default-theme md-tab.active {
     color: #fff;
     background-color: rgba(255, 255, 255, 0.20);
-}
-
-@media (min-width: 480px){
-    .app-header-inner, .page-content-holder {
-        width: 450px;
-    }
-}
-
-@media (min-width: 768px){
-    .app-header-inner, .page-content-holder {
-        width: 750px;
-    }
-}
-
-@media (min-width: 992px){
-    .app-header-inner, .page-content-holder {
-        width: 970px;
-    }
-}
-
-@media (min-width: 1200px){
-    .app-header-inner, .page-content-holder {
-        width: 1170px;
-    }
 }

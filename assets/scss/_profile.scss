@@ -1,13 +1,19 @@
-.user-details-left{
-    background-color: $custom-bg-color;
-    margin: 40px 40px 40px 8px;
+.user-row{
+    margin-bottom: 2em;
 }
+
+.user-details{
+    background-color: $custom-bg-color;
+    margin-right: 2em;
+}
+
 .user-img{
     border-radius: 50%;
     border: 5px solid #FFF;
     width: 120px;
 }
-.user-row{
+
+.user-details-row{
     margin: .83em 0;
 }
 
@@ -26,32 +32,24 @@
     background-color: $custom-brown2;
 }
 
-.user-about{
-    margin: 40px 8px 16px 20px;
-}
-
 .user-about p{
     text-align: justify;
 }
 
 .user-social-button{
-    margin: 0 5px;
+    margin: 7px 7px 0 0;
 }
 
 .user-contact-btn{
     margin-left: 15px;
 }
 
-.user-chart{
-    padding: 0 8px;
-}
-
 .user-chart-container{
-   // height: 150px;
+   padding: 0 8px;
 }
 
 .user-products{
-    margin: 40px 40px 0px 8px;
+    margin-right: 2em;
 }
 
 .user-products-display{
@@ -62,11 +60,11 @@
 }
 .user-products-display img{
     display: block;
-    margin-bottom: 5px;
+    //margin-bottom: 5px;
 }
 
 .user-friends{
-    margin: 40px 8px 0px 0;
+    //margin: 40px 8px 0px 0;
 }
 
 .user-friends-list{

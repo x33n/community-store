@@ -80,9 +80,8 @@ md-sidenav h2.bottom-space{
 }
 
 
-// ~~~ general styles
+// ~~~ buttons
 
-// buttons
 .icon-large{
     font-size: $icon-large;
 }
@@ -107,14 +106,22 @@ md-sidenav h2.bottom-space{
     color: darken($custom-blue, 10%);
 }
 
-.content-button{
-    padding: 6px 16px;
+.large-button{
+    padding: 6px $padding-small;
+}
+
+.small-button{
+    padding: 6px $padding-small;
     text-transform: none;
 }
 
+
+// ~~~ general styles
+
 // content
-.page-content-holder{
+.app-mainframe{
     background-color: #fff;
+    padding-top: 2em;
 }
 
 //list
@@ -130,4 +137,31 @@ ul.list-simple > li{
 ul.list-simple > li i{
     padding: 0 10px;
     color: darken($custom-bg-color, 15%);
+}
+
+
+// ~~~ media queries
+
+@media (min-width: 480px){
+    .app-header-inner, .app-mainframe {
+        width: 450px;
+    }
+}
+
+@media (min-width: 768px){
+    .app-header-inner, .app-mainframe {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px){
+    .app-header-inner, .app-mainframe {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px){
+    .app-header-inner, .app-mainframe {
+        width: 1170px;
+    }
 }

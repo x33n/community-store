@@ -64,5 +64,8 @@ angular.module('ProfileView', [])
     },{
         img: 'user',
         name: 'Abcd Efg'
+    },{
+        img: 'user',
+        name: 'Abcd Efg'
     }];
 });

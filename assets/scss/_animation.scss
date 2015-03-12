@@ -30,7 +30,7 @@
 }
 
 // home inner page ---
-.home-inner-page.ng-animate {
+.app-mainframe.ng-animate {
     position: absolute;
     top: 69px;
     left: 0;
@@ -38,14 +38,14 @@
     z-index: 9999;
 }
 
-.home-inner-page.ng-leave.ng-leave-active,
-.home-inner-page.ng-enter {
+.app-mainframe.ng-leave.ng-leave-active,
+.app-mainframe.ng-enter {
     opacity: 0;
     @include transform-page-effect(100px, 20px, 0.9);
 }
 
-.home-inner-page.ng-leave,
-.home-inner-page.ng-enter.ng-enter-active {
+.app-mainframe.ng-leave,
+.app-mainframe.ng-enter.ng-enter-active {
     opacity: 1;
     -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
