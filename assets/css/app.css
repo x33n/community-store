@@ -5199,24 +5199,22 @@ ul.list-simple > li i {
   width: 500px;
   height: 450px; }
 
-.form-animate.ng-animate {
+.form-animate-container form.ng-animate {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0; }
 
-.form-animate.ng-leave.ng-leave-active,
-.form-animate.ng-enter {
-  opacity: 0;
-  -webkit-transform: translate3d(100px, 0, 0) scale(0.9);
-  transform: translate3d(100px, 0, 0) scale(0.9); }
+.form-animate-container form.ng-leave.ng-leave-active,
+.form-animate-container form.ng-enter {
+  display: block;
+  z-index: 888; }
 
-.form-animate.ng-leave,
-.form-animate.ng-enter.ng-enter-active {
-  opacity: 1;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out; }
+.form-animate-container form.ng-leave,
+.form-animate-container form.ng-enter.ng-enter-active {
+  display: none;
+  z-index: 999; }
 
 .form-actions .social-button {
   border-radius: 50px;

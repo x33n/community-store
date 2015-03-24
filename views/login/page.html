@@ -23,7 +23,7 @@
     <div class="login-pages form-animate-container" ng-switch on="stateChange">
 
         <!-- login -->
-        <form name="loginForm" class="form-animate" ng-switch-when="loginMode">
+        <form name="loginForm" class="flipOutY" ng-switch-when="loginMode">
 
             <md-input-container>
                 <label>Email</label>
@@ -55,11 +55,14 @@
                 </div>
             </div>
 
-            <div class="form-footer">Don't have an account yet? <a href="javascript:void(0)" ng-click="changeFormState($event)" id="loginFormTrigger">Create an account</a></div>
+            <div class="form-footer">
+                Don't have an account yet? 
+                <flip-login-panel>Create an account</flip-login-panel>
+            </div>
         </form>
 
         <!-- register -->
-        <form class="form-animate" ng-switch-when="registerMode">
+        <form class="flipOutY" ng-switch-when="registerMode">
             <md-input-container>
                 <label>Email</label>
                 <input placeholder="example@email.com" required>
@@ -79,7 +82,10 @@
             
             <md-button class="button-margin md-raised md-primary large-button">Sign Up</md-button>
 
-            <div class="form-footer">Already have an account? <a href="javascript:void(0)" ng-click="changeFormState($event)">Log In</a></div>
+            <div class="form-footer">
+                Already have an account? 
+                <flip-login-panel>Log In</flip-login-panel>
+            </div>
         </form>
     </div>
 </div>
